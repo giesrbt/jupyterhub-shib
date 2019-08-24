@@ -9,5 +9,5 @@ RUN git clone https://github.com/jupyterhub/kubespawner.git
 RUN cd kubespawner && python setup.py install
 
 # Install uthenticator from git
-RUN python3 -m pip install jupyterhub-dummyauthenticator
+RUN pip install jupyterhub-dummyauthenticator
 
