@@ -6,11 +6,10 @@ FROM jupyterhub/jupyterhub
 
 # RUN pip install jupyter
 
-# Install kubeswapner
-# RUN git clone https://github.com/jupyterhub/kubespawner.git
-# RUN cd kubespawner && python setup.py install
+# Install kubespawner
 # RUN pip install jupyterhub-kubespawner
-# RUN pip install jupyterhub-simplespawner
+RUN git clone https://github.com/jupyterhub/kubespawner.git
+RUN cd kubespawner && python setup.py install
 
 # Install uthenticator from git
 RUN pip install jupyterhub-dummyauthenticator
